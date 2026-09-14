@@ -5,10 +5,10 @@ def dashboard():
     
 
 def estimate_reading_time(pages):
-    return pages / 40
+    return round(pages / 40, 1)
 
 def add_book():
-    title = input("Book title: ")
+    title = input("Book title: ").title()
     author = input("Author: ")
     pages = int(input("Page count: ")) 
     hours = estimate_reading_time(pages)
